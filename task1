@@ -1,0 +1,20 @@
+tpl = (32, 64, 126, 216, 512, 1024)
+lst = [32, 64, 126, 216, 512, 1024]
+tpl1 = (32, 64, 126, 216, 512, 2048)
+
+print("types")
+print(type(tpl))
+print(type(lst))
+
+print("ids")
+print(id(tpl))
+print(id(lst))
+
+print("element ids")
+print(id(tpl[0]))
+lst[0] = 16
+print(id(tpl[0]))
+
+print("diff tpl ids")
+print(id(tpl))
+print(id(tpl1))
