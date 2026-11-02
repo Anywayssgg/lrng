@@ -14,7 +14,7 @@ print(participant_info)
 def check_func():
     print("введите id")
     sid = int(input())
-    if sid in accepted_ids or sid in request_ids:
+    if sid in accepted_ids:
         print(participant_info[sid])
     else:
         print("такого участника не существует")
