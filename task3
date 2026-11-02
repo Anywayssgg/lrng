@@ -1,5 +1,6 @@
 import timeit
 
+
 setup_template = """
 size = {size}
 data_list = list(range(size))
