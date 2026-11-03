@@ -1,7 +1,8 @@
 conf_inf = ("«Python в инженерных задачах»", "15.10.2026", "аудитория 204")
 request_ids = [102, 117, 131, 145, 156, 160]
 accepted_ids = {102, 117, 131, 145}
-participant_info = {102 : "Анна Орлова", 117 : "Иван Петров"}
+participant_info = {102 : "Анна Орлова", 117 : "Иван Петров", 131 : "Николай Сидоров", 
+145 : "Канье Уэст", 156 : "Артур Акберов", 160 : "Александр Тимофеев"}
 
 print(conf_inf)
 print(request_ids)
@@ -16,8 +17,12 @@ def check_func():
     sid = int(input())
     if sid in accepted_ids:
         print(participant_info[sid])
+    elif sid in request_ids:
+        print(participant_info[sid])
     else:
         print("такого участника не существует")
+    
+    
 
 
 
