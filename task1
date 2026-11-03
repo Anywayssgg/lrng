@@ -10,10 +10,10 @@ print("ids")
 print(id(tpl))
 print(id(lst))
 
-print("element ids")
-print(id(tpl[0]))
+print("list ids")
+print(id(lst))
 lst[0] = 16
-print(id(tpl[0]))
+print(id(lst))
 
 print("diff tpl ids")
 print(id(tpl))
