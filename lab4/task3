@@ -1,26 +1,8 @@
-import timeit
+sqrs1 = []
+for number in range(101):
+  if number % 2 == 0:
+    sqrs1.append(number**2)
 
+sqrs2 = [number**2 for number in range(101) if number % 2 == 0]
 
-setup_template = """
-size = {size}
-data_list = list(range(size))
-data_set = set(data_list)
-existing_val = size // 2
-missing_val = size + 1
-"""
-
-sizes = [1000, 10000, 100000]
-run_num = 5000
-
-print(f"{'Размер':<10} | {'Список (Есть)':<15} | {'Список (Нет)':<15} | {'Множество (Есть)':<18} | {'Множество (Нет)':<18}")
-print("-" * 85)
-
-for size in sizes:
-    setup_code = setup_template.format(size=size)
-    
-    t_list_in = timeit.timeit('existing_val in data_list', setup=setup_code, number=run_num)
-    t_list_not_in = timeit.timeit('missing_val in data_list', setup=setup_code, number=run_num)
-    t_set_in = timeit.timeit('existing_val in data_set', setup=setup_code, number=run_num)
-    t_set_not_in = timeit.timeit('missing_val in data_set', setup=setup_code, number=run_num)
-    
-    print(f"{size:<10} | {t_list_in:<15.5f} | {t_list_not_in:<15.5f} | {t_set_in:<18.5f} | {t_set_not_in:<18.5f}")
+print(sqrs1 == sqrs2)
