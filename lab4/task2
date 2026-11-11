@@ -1,10 +1,5 @@
-lst = [2, 2, 1, 3, 4, 5, 6, 6, 7, 8]
-st = set(lst)
+names = ["Анна", "Борис", "Виктор"]
+grades = [5, 3, 4]
 
-print("compare num of elems")
-print(len(lst))
-print(len(st)) 
-
-print ("compare collections") 
-print(lst)
-print(st) 
+for name, grade in zip(names, grades):
+  print(f"{name}: {grade}")
