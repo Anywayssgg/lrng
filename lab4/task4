@@ -1,15 +1,9 @@
-import sys
+words = ["код", "питон", "список", "код", "словарь"]
+lengths_loop = {}
+for word in words:
+  lengths_loop[word] = len(word)
+print(lengths_loop)
 
-tpl = (1, 2, 4, 8, 16, 32)
-lst = [1, 2, 4, 8, 16, 32]
-st = set(lst)
-dct = {0 : 1, 1 : 2, 2 : 4, 3 : 8, 4 : 16, 5 : 32}
-
-print("dct element")
-print(dct[4])
-
-print("compare sys,getsizeof()")
-print(f" dictionary: {sys.getsizeof(dct)}")
-print(f" tuple: {sys.getsizeof(tpl)}")
-print(f" set: {sys.getsizeof(st)}")
-print(f" list: {sys.getsizeof(lst)}")
+words = ["код", "питон", "список", "код", "словарь"]
+lengths_comp = {word: len(word) for word in words}
+print(lengths_comp) 
