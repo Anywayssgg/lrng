@@ -1,0 +1,51 @@
+conf_inf = ("«Python в инженерных задачах»", "15.10.2026", "аудитория 204")
+request_ids = [102, 117, 131, 145, 156, 160]
+accepted_ids = {102, 117, 131, 145}
+participant_info = {102 : "Анна Орлова", 117 : "Иван Петров", 131 : "Николай Сидоров", 
+145 : "Канье Уэст", 156 : "Артур Акберов", 160 : "Александр Тимофеев"}
+
+print(conf_inf)
+print(request_ids)
+print(accepted_ids)
+print(participant_info)
+
+
+
+
+def check_func():
+    print("введите id")
+    sid = int(input())
+    if sid in accepted_ids:
+        print(participant_info[sid])
+    elif sid in request_ids:
+        print(participant_info[sid])
+    else:
+        print("такого участника не существует")
+    
+    
+
+
+
+def add_func():
+    print("введите фамилию и имя участника")
+    initials = str(input())
+    print(f"id нового участника - {max(request_ids)+1}")
+    participant_info[max(request_ids)+1] = initials
+    request_ids.append(max(request_ids)+1)
+
+    
+def body():
+    print("check - проверить наличие участника по id")
+    print("add - добавить участника")
+    choice = str(input())
+    if choice == "check":
+       check_func()
+    if choice == "add":
+       add_func()
+    
+
+while True:
+    body()   
+
+
+

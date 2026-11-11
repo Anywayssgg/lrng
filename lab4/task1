@@ -1,0 +1,9 @@
+grades = [5, 4, 5, 3, 4]
+
+counter = 1
+for grade in grades:
+  print(f"{counter}: {grade}")
+  counter += 1
+
+for number, grade in enumerate(grades, start=1):
+  print(f"{number}: {grade}")
