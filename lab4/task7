@@ -1,0 +1,15 @@
+names = ["Анна", "Борис", "Вера", "Глеб"]
+grades = [5, 3, 4, 2]
+
+# 1. Нумерованная ведомость
+print("Нумерованная ведомость:")
+for index, (name, grade) in enumerate(zip(names, grades), start=1):
+    print(f"{index}. {name} — {grade}")
+
+# 2. Список студентов с оценкой не ниже 4 (list comprehension)
+good_students = [name for name, grade in zip(names, grades) if grade >= 4]
+print("\nСтуденты с оценкой не ниже 4:", good_students)
+
+# 3. Словарь ФИО -> оценка (dict comprehension)
+grades_dict = {name: grade for name, grade in zip(names, grades)}
+print("\nСловарь успеваемости:", grades_dict)
